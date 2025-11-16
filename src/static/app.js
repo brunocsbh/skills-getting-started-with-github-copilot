@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (details.participants.length > 0) {
           participantsHTML = `
             <div class="participants-section">
-              <strong>Participants:</strong>
+              <div class="participants-header">
+                <strong>Participants (${details.participants.length}):</strong>
+              </div>
               <ul class="participants-list">
                 ${details.participants.map(p => `<li>${p}</li>`).join("")}
               </ul>
@@ -33,8 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
           `;
         } else {
           participantsHTML = `
-            <div class="participants-section">
-              <strong>Participants:</strong>
+            <div class="participants-section empty">
+              <div class="participants-header">
+                <strong>Participants:</strong>
+              </div>
               <p class="no-participants">No participants yet.</p>
             </div>
           `;
