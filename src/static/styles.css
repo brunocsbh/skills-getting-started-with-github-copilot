@@ -65,7 +65,7 @@ section h3 {
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background: linear-gradient(135deg,#f9f9f9 0%, #ffffff 60%);
   position: relative;
   overflow: hidden;
 }
@@ -144,4 +144,70 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+/* Participants section styling */
+.participants-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e2e2;
+  animation: fadeIn 0.3s ease;
+}
+.participants-section.empty {
+  background: #fafafa;
+  border: 1px dashed #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+.participants-header {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.participants-list {
+  list-style: disc;
+  margin: 8px 0 0 18px;
+  padding: 0 4px 4px 0;
+  max-height: 150px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c5c5c5 #f0f0f0;
+}
+.participants-list li {
+  padding: 3px 6px;
+  margin-bottom: 4px;
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.no-participants {
+  margin: 6px 0 0;
+  font-style: italic;
+  color: #777;
+  font-size: 0.85rem;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Custom scrollbar (WebKit) */
+.participants-list::-webkit-scrollbar {
+  width: 6px;
+}
+.participants-list::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+.participants-list::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 3px;
+}
+.participants-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
